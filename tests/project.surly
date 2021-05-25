@@ -1,0 +1,8 @@
+PRINT Student;
+
+P1 = PROJECT sid, name, FROM Student;
+PRINT P1;
+
+P2 = PROJECT COUNT(gpa), AVG(gpa) FROM Student;
+PRINT P2;
+

@@ -1,0 +1,96 @@
+/* Prelude to all of the test files, loaded before them */
+
+RELATION Student(sid NUM 0, name CHAR 20, gpa NUM 2);
+RELATION Course(cid NUM 4, dept CHAR 4, title CHAR 30, credits Num 4);
+RELATION Department(abbr CHAR 4, title CHAR 20);
+RELATION Instructor(iid NUM 8, name CHAR 20, dept CHAR 4);
+RELATION Takes(sid NUM 0, cid NUM 4, dept CHAR 4);
+RELATION Teaches(iid NUM 8, cid NUM 4, dept CHAR 4);
+
+/* Student */
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+INSERT Student 1 'Zoe Washburne'       3.35;
+INSERT Student 2 'Wash Washburne'      2.85;
+INSERT Student 3 'Inara Serra'         3.65;
+INSERT Student 4 'Jayne Cobb'          0.35;
+INSERT Student 5 'Kaylee Frye'         3.30;
+INSERT Student 6 'Simon Tam'           3.90;
+INSERT Student 7 'River Tam'           4.00;
+INSERT Student 8 'Derrial Book'        3.75;
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+INSERT Student 0 'Malcolm Reynolds'    2.40;
+
+/* Course */
+INSERT Course 241 CSCI 'Data Structures'                5;
+INSERT Course 247 CSCI 'Computer Systems I'             5;
+INSERT Course 301 CSCI 'Functional Languages'           5;
+INSERT Course 330 CSCI 'Database Systems'               4;
+INSERT Course 405 CSCI 'Analysis of Algorithms II'      5;
+INSERT Course 226 MATH 'Limits and Infinite Series'     4;
+INSERT Course 302 MATH 'Number Theory'                  5;
+INSERT Course 312 MATH 'Elementary Analysis'            5;
+INSERT Course 401 MATH 'Abstract Algebra'               5;
+INSERT Course 101 GERM 'Elementary German'              5;
+INSERT Course 201 LING 'Intro to Linguistics'           3;
+INSERT Course 310 LING 'Linguistic Analysis'            4;
+INSERT Course 321 LING 'Syntax'                         4;
+
+/* Department */
+INSERT Department CSCI 'Computer Science';
+INSERT Department MATH 'Math';
+INSERT Department GERM 'German';
+INSERT Department LING 'Linguistics';
+
+/* Instructor */
+INSERT Instructor 0 'Jake Peralta'         CSCI;
+INSERT Instructor 1 'Rosa Diaz'            CSCI;
+INSERT Instructor 2 'Terry Jeffords'       MATH;
+INSERT Instructor 3 'Amy Santiago'         MATH;
+INSERT Instructor 4 'Charles Boyle'        GERM;
+INSERT Instructor 5 'Raymond Hold'         LING;
+
+/* Takes */
+INSERT Takes 0 247 CSCI;
+INSERT Takes 0 301 CSCI;
+INSERT Takes 0 302 MATH;
+INSERT Takes 1 226 MATH;
+INSERT Takes 1 302 MATH;
+INSERT Takes 2 101 GERM;
+INSERT Takes 2 330 CSCI;
+INSERT Takes 2 405 CSCI;
+INSERT Takes 3 310 LING;
+INSERT Takes 3 321 LING;
+INSERT Takes 3 101 GERM;
+INSERT Takes 4 321 LING;
+INSERT Takes 4 401 MATH;
+INSERT Takes 5 241 CSCI;
+INSERT Takes 5 247 CSCI;
+INSERT Takes 5 201 LING;
+INSERT Takes 6 312 MATH;
+INSERT Takes 6 401 MATH;
+INSERT Takes 6 405 CSCI;
+INSERT Takes 7 226 MATH;
+INSERT Takes 7 302 MATH;
+INSERT Takes 7 241 CSCI;
+INSERT Takes 7 301 CSCI;
+INSERT Takes 7 101 GERM;
+INSERT Takes 8 201 LING;
+
+/* Teaches */
+INSERT Teaches 0 241 CSCI;
+INSERT Teaches 0 301 CSCI;
+INSERT Teaches 0 405 CSCI;
+INSERT Teaches 1 247 CSCI;
+INSERT Teaches 1 330 CSCI;
+INSERT Teaches 2 226 MATH;
+INSERT Teaches 2 312 MATH;
+INSERT Teaches 3 302 MATH;
+INSERT Teaches 3 401 MATH;
+INSERT Teaches 4 101 GERM;
+INSERT Teaches 5 201 LING;
+INSERT Teaches 5 310 LING;
+INSERT Teaches 5 321 LING;
+

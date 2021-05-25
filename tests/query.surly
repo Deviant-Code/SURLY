@@ -1,0 +1,29 @@
+/* Tests simple SELECT, JOIN, and DELETE statements */
+
+Students = SELECT Student WHERE sid > 3;
+PRINT Students;
+
+SimpleJoin = JOIN Course, Department ON dept = abbr;
+PRINT SimpleJoin;
+
+ComplexJoin = JOIN Student, Takes
+    ON Student.sid = Takes.sid;
+PRINT ComplexJoin;
+
+WeWontStandForDuplicateTuples = PROJECT Name,GPA FROM ComplexJoin;
+PRINT WeWontStandForDuplicateTuples;
+
+PRINT Instructor;
+DELETE Instructor WHERE dept = MATH;
+PRINT Instructor;
+
+B = PROJECT COURSE.title, CREDITS FROM B;
+PRINT B;
+
+AvgCredits = PROJECT SUM(credits), AVG(gpa), COUNT(name) FROM
+    (JOIN
+        (SELECT Student WHERE gpa > 3),
+        (JOIN Takes, Course ON Takes.cid = Course.cid)
+    ON Student.sid = Takes.sid);
+PRINT AvgCredits;
+

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+java -XX:-OmitStackTraceInFastThrow -jar bin/Surly.jar $@

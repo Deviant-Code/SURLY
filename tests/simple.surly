@@ -1,0 +1,15 @@
+/* Tests on Print, Destroy */
+
+PRINT Course, Student, Department;
+DESTROY Teaches;
+
+/* Error tests */
+DESTROY Teaches;
+PRINT Teaches;
+
+DESTROY Foo;
+DESTROY Foo, Bar, Baz;
+
+PRINT Department
+PRINT Student, Foo, Teaches;
+PRINT Student, Instructor

@@ -1,0 +1,33 @@
+
+Printing 1 relation(s):
+Student:
+sid  name              gpa   
+  0  Malcolm Reynolds   2.4  
+  1  Zoe Washburne     3.35  
+  2  Wash Washburne    2.85  
+  3  Inara Serra       3.65  
+  4  Jayne Cobb        0.35  
+  5  Kaylee Frye        3.3  
+  6  Simon Tam          3.9  
+  7  River Tam            4  
+  8  Derrial Book      3.75  
+
+Assigning variable 'P1'
+Printing 1 relation(s):
+P1:
+sid  name              
+  0  Malcolm Reynolds  
+  1  Zoe Washburne     
+  2  Wash Washburne    
+  3  Inara Serra       
+  4  Jayne Cobb        
+  5  Kaylee Frye       
+  6  Simon Tam         
+  7  River Tam         
+  8  Derrial Book      
+
+Assigning variable 'P2'
+Printing 1 relation(s):
+P2:
+gpa  gpa     
+  9  3.0611  

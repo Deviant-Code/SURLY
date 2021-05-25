@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+ARGS=()
+
+while (( $# > 0 )); do
+    case $1 in
+        -s|--set)
+            SET=true
+            shift
+            ;;
+        -a|--all)
+            ALL=true
+            shift
+            ;;
+        -d|--diff)
+            DIFF=true
+            shift
+            ;;
+        -b|--build)
+            BUILD=true
+            shift
+            ;;
+        *)
+            ARGS+=($1)
+            shift
+            ;;
+    esac
+done
+
+set -- $ARGS
+
+if [[ $BUILD == true ]]; then
+    make
+    [[ $? -ne 0 ]] && exit $?
+fi
+
+if [[ $# -eq 0 ]] && [[ $ALL != true ]]; then
+    ./run -s tests/prelude.surly --repl
+    exit
+fi
+
+for f in $@; do
+    out=$( ./run -s tests/prelude.surly tests/$f.surly 2>&1 )
+
+    if [[ $SET == true ]]; then
+        echo Sending output from $f to $f.out
+        echo "$out" &> tests/$f.out
+    elif [[ $DIFF == true ]]; then
+        res=$( diff <(echo "$out") tests/$f.out )
+        [[ -z $res ]] && echo Output of $f has not changed || echo Output of $f has changed
+    else
+        echo
+        echo RUNNING $f
+        echo
+        echo "$out"
+    fi
+done
+
+if  [[ $ALL == true ]]; then
+    t_pattern="*.surly"
+
+    for f in $( ls tests ); do
+        if [[ $f == $t_pattern ]] && [[ $f != prelude.surly ]]; then
+            f=${f::-6}
+
+            out=$( ./run -s tests/prelude.surly tests/$f.surly 2>&1 )
+
+            if [[ $SET == true ]]; then
+                echo Sending output from $f to $f.out
+                echo "$out" &> tests/$f.out
+            elif [[ $DIFF == true ]]; then
+                res=$( diff <(echo "$out") tests/$f.out )
+                [[ -z $res ]] && echo $f has not changed || echo [X] $f has changed
+            else
+                echo
+                echo RUNNING $f
+                echo
+                echo "$out"
+            fi
+        fi 
+    done 
+fi

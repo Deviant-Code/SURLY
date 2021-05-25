@@ -1,0 +1,69 @@
+
+Printing 3 relation(s):
+Course:
+cid  dept  title                       credits  
+241  CSCI  Data Structures                   5  
+247  CSCI  Computer Systems I                5  
+301  CSCI  Functional Languages              5  
+330  CSCI  Database Systems                  4  
+405  CSCI  Analysis of Algorithms II         5  
+226  MATH  Limits and Infinite Series        4  
+302  MATH  Number Theory                     5  
+312  MATH  Elementary Analysis               5  
+401  MATH  Abstract Algebra                  5  
+101  GERM  Elementary German                 5  
+201  LING  Intro to Linguistics              3  
+310  LING  Linguistic Analysis               4  
+321  LING  Syntax                            4  
+
+Student:
+sid  name              gpa   
+  0  Malcolm Reynolds   2.4  
+  1  Zoe Washburne     3.35  
+  2  Wash Washburne    2.85  
+  3  Inara Serra       3.65  
+  4  Jayne Cobb        0.35  
+  5  Kaylee Frye        3.3  
+  6  Simon Tam          3.9  
+  7  River Tam            4  
+  8  Derrial Book      3.75  
+
+Department:
+abbr  title             
+CSCI  Computer Science  
+MATH  Math              
+GERM  German            
+LING  Linguistics       
+
+Destroying relation: Teaches
+Error: Attempted to remove Teaches, which is not in the database
+Printing 1 relation(s):
+Error: Teaches does not exist
+Error: Attempted to remove Foo, which is not in the database
+Printing 5 relation(s):
+Department:
+abbr  title             
+CSCI  Computer Science  
+MATH  Math              
+GERM  German            
+LING  Linguistics       
+
+Error: PRINT does not exist
+Student:
+sid  name              gpa   
+  0  Malcolm Reynolds   2.4  
+  1  Zoe Washburne     3.35  
+  2  Wash Washburne    2.85  
+  3  Inara Serra       3.65  
+  4  Jayne Cobb        0.35  
+  5  Kaylee Frye        3.3  
+  6  Simon Tam          3.9  
+  7  River Tam            4  
+  8  Derrial Book      3.75  
+
+Error: Foo does not exist
+Error: Teaches does not exist
+
+Syntax Errors:
+Line 11, Char 14: Expected SEMICOLON, got IDENT
+Line -1, Char -1: Got EOF before statement ended

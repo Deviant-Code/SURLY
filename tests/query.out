@@ -1,0 +1,100 @@
+
+Assigning variable 'Students'
+Printing 1 relation(s):
+Students:
+sid  name          gpa   
+  4  Jayne Cobb    0.35  
+  5  Kaylee Frye    3.3  
+  6  Simon Tam      3.9  
+  7  River Tam        4  
+  8  Derrial Book  3.75  
+
+Assigning variable 'SimpleJoin'
+Printing 1 relation(s):
+SimpleJoin:
+cid  dept  Course.title                credits  abbr  Department.title  
+241  CSCI  Data Structures                   5  CSCI  Computer Science  
+247  CSCI  Computer Systems I                5  CSCI  Computer Science  
+301  CSCI  Functional Languages              5  CSCI  Computer Science  
+330  CSCI  Database Systems                  4  CSCI  Computer Science  
+405  CSCI  Analysis of Algorithms II         5  CSCI  Computer Science  
+226  MATH  Limits and Infinite Series        4  MATH  Math              
+302  MATH  Number Theory                     5  MATH  Math              
+312  MATH  Elementary Analysis               5  MATH  Math              
+401  MATH  Abstract Algebra                  5  MATH  Math              
+101  GERM  Elementary German                 5  GERM  German            
+201  LING  Intro to Linguistics              3  LING  Linguistics       
+310  LING  Linguistic Analysis               4  LING  Linguistics       
+321  LING  Syntax                            4  LING  Linguistics       
+
+Assigning variable 'ComplexJoin'
+Printing 1 relation(s):
+ComplexJoin:
+Student.sid  name              gpa   Takes.sid  cid  dept  
+          0  Malcolm Reynolds   2.4          0  247  CSCI  
+          0  Malcolm Reynolds   2.4          0  301  CSCI  
+          0  Malcolm Reynolds   2.4          0  302  MATH  
+          1  Zoe Washburne     3.35          1  226  MATH  
+          1  Zoe Washburne     3.35          1  302  MATH  
+          2  Wash Washburne    2.85          2  101  GERM  
+          2  Wash Washburne    2.85          2  330  CSCI  
+          2  Wash Washburne    2.85          2  405  CSCI  
+          3  Inara Serra       3.65          3  310  LING  
+          3  Inara Serra       3.65          3  321  LING  
+          3  Inara Serra       3.65          3  101  GERM  
+          4  Jayne Cobb        0.35          4  321  LING  
+          4  Jayne Cobb        0.35          4  401  MATH  
+          5  Kaylee Frye        3.3          5  241  CSCI  
+          5  Kaylee Frye        3.3          5  247  CSCI  
+          5  Kaylee Frye        3.3          5  201  LING  
+          6  Simon Tam          3.9          6  312  MATH  
+          6  Simon Tam          3.9          6  401  MATH  
+          6  Simon Tam          3.9          6  405  CSCI  
+          7  River Tam            4          7  226  MATH  
+          7  River Tam            4          7  302  MATH  
+          7  River Tam            4          7  241  CSCI  
+          7  River Tam            4          7  301  CSCI  
+          7  River Tam            4          7  101  GERM  
+          8  Derrial Book      3.75          8  201  LING  
+
+Assigning variable 'WeWontStandForDuplicateTuples'
+Printing 1 relation(s):
+WeWontStandForDuplicateTuples:
+name              gpa   
+Malcolm Reynolds   2.4  
+Zoe Washburne     3.35  
+Wash Washburne    2.85  
+Inara Serra       3.65  
+Jayne Cobb        0.35  
+Kaylee Frye        3.3  
+Simon Tam          3.9  
+River Tam            4  
+Derrial Book      3.75  
+
+Printing 1 relation(s):
+Instructor:
+iid  name            dept  
+  0  Jake Peralta    CSCI  
+  1  Rosa Diaz       CSCI  
+  2  Terry Jeffords  MATH  
+  3  Amy Santiago    MATH  
+  4  Charles Boyle   GERM  
+  5  Raymond Hold    LING  
+
+Deleting 2 tuples from Instructor
+Printing 1 relation(s):
+Instructor:
+iid  name           dept  
+  0  Jake Peralta   CSCI  
+  1  Rosa Diaz      CSCI  
+  4  Charles Boyle  GERM  
+  5  Raymond Hold   LING  
+
+Error: B does not exist
+Printing 1 relation(s):
+Error: B does not exist
+Assigning variable 'AvgCredits'
+Printing 1 relation(s):
+AvgCredits:
+credits  gpa     name  
+     77  3.7059    17  
